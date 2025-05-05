@@ -1,5 +1,5 @@
 import { createContext, createSignal, useContext, Show, onMount } from "solid-js";
-import { pb } from "../services/pocketbase";
+import { pb } from "/services/pocketbase";
 
 
 //context
