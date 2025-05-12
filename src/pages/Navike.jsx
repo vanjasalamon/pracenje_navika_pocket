@@ -1,6 +1,6 @@
 import { createSignal, Show } from "solid-js";
 import { useAuth } from "../components/AuthProvider";
-import pb from "/services/pocketbase";
+import {pb} from "/services/pocketbase";
 
 export default function Navike() {
     const session = useAuth();
@@ -21,7 +21,7 @@ export default function Navike() {
             await pb.collection("navike").create({
                 naziv: name,
                 opis: description,
-                author_id: session().model.id, // PB vraća user kao "model", ne "user"
+                author_id: session().model.id, 
             });
 
             setSuccess(true);

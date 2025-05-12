@@ -7,6 +7,7 @@ import Navike from "./pages/Navike";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Pregled from "./pages/Pregled";
+import Button from "./components/Button";
 
 
 function App() {
@@ -43,7 +44,7 @@ function Layout(props) {
             <Button href="/signout" label="Odjava" color="bg-pink-500" />
           </Show>
           <Show when={!user()}>
-            <Button href="/signin" label="Prijava" color="bg-amber-500" />
+            <Button href="/login" label="Prijava" color="bg-amber-500" />
             <Button href="/signup" label="Registracija" />
           </Show>
         </nav>
